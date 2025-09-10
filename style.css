@@ -223,23 +223,24 @@ footer p {
     }
 }
 
-/* ---------------- MELHORIA: Menu minimizado em landscape ---------------- */
+/* ---------------- MELHORIA: Menu compacto no topo em landscape ---------------- */
 @media (max-width: 1024px) and (orientation: landscape) {
     header {
-        padding: 5px 0; /* altura do header menor */
+        padding: 2px 0; /* altura mínima do header */
     }
 
     header h1 {
-        font-size: 1.4rem; /* título menor */
-        margin-bottom: 5px;
+        font-size: 1.2rem; /* título bem menor */
+        margin-bottom: 2px;
     }
 
     nav ul li a {
-        font-size: 0.9em; /* links menores */
-        padding: 2px 6px; /* menos espaço entre links */
+        font-size: 0.8em; /* links menores */
+        padding: 1px 4px; /* menos espaço entre links */
     }
 
     nav ul li {
-        margin: 0 8px; /* menos distância entre itens */
+        margin: 0 5px; /* distância mínima entre itens */
     }
 }
+
