@@ -10,7 +10,7 @@
     <header>
         <div class="container">
             <!-- Logo na parte superior -->
-            <img src="./imagens/logo.jpg" alt="Logo Sustentabilidade" class="logo">
+            <img src="imagens/logo.jpg" alt="Logo Sustentabilidade" class="logo">
             <h1>Sustentabilidade: Preservando o Futuro</h1>
             <nav>
                 <ul>
@@ -39,7 +39,7 @@
         <div class="container">
             <h2>O que é Sustentabilidade?</h2>
             <p>A sustentabilidade busca atender às necessidades do presente sem comprometer a capacidade das futuras gerações de atenderem às suas próprias necessidades. Isso envolve práticas que reduzem o impacto ambiental, promovem a justiça social e garantem o desenvolvimento econômico a longo prazo. A sustentabilidade é um conceito integral, que se baseia nos princípios de economia circular e na promoção do uso responsável dos recursos naturais.</p>
-            <img src="./imagens/reciclagem.jpg" alt="Sustentabilidade" class="imagem-sobre">
+            <img src="imagens/reciclagem.webp" alt="Sustentabilidade" class="imagem-sobre">
         </div>
     </section>
 
@@ -54,7 +54,7 @@
                 <li>Recicle sempre que possível e descarte corretamente os resíduos. Muitos materiais podem ser reaproveitados e ter uma segunda vida útil.</li>
                 <li>Utilize transporte público, bicicletas ou caminhe para reduzir a emissão de gases poluentes e melhorar a qualidade de vida urbana.</li>
             </ul>
-            <img src="./imagens/projetos-sustentaveis.png" alt="Dicas Sustentáveis" class="imagem-dicas">
+            <img src="imagens/projetos sustentaveis.png" alt="Dicas Sustentáveis" class="imagem-dicas">
         </div>
     </section>
 
@@ -64,34 +64,30 @@
             <h2>Contato com a Natureza</h2>
             <p>A natureza é nossa fonte de vida e equilíbrio. Ter uma conexão direta com ela é essencial para manter nossa saúde mental e física. O contato com ambientes naturais ajuda a reduzir o estresse, melhora o bem-estar e aumenta nossa compreensão sobre a importância da preservação ambiental. Ao nos conectarmos com a natureza, entendemos o impacto que nossas ações podem ter no planeta, reforçando a necessidade de agir com responsabilidade ambiental. Além disso, o ecoturismo e as atividades de conservação têm sido importantes para sensibilizar as populações sobre a importância da proteção ambiental.</p>
             <div class="contato-natureza-imagens">
-                <img src="./imagens/Sustainability-islife.jpg" alt="Contato com a Natureza" class="imagem-contato-natureza">
-                <img src="./imagens/contact-nature.jpg" alt="Contato Profissional" class="imagem-contato-profissional">
+                <img src="imagens/Sustainability-islife.webp" alt="Contato com a Natureza" class="imagem-contato-natureza">
+                <img src="imagens/contact nature.jfif" alt="Contato Profissional" class="imagem-contato-profissional">
             </div>
         </div>
     </section>
 
-    <!-- Seção: Sustentabilidade Empresarial -->
     <section id="sustentabilidade-empresarial">
-        <div class="container">
-            <h2>Sustentabilidade Empresarial</h2>
-            <p>
-                Adotar práticas sustentáveis no ambiente empresarial é essencial para reduzir impactos ambientais e otimizar recursos. 
-                Empresas podem investir em economia de energia, reciclagem, uso consciente de materiais, redução de desperdícios e projetos sociais. 
-                Além disso, implementar políticas de responsabilidade ambiental e social fortalece a imagem da empresa, aumenta a confiança de clientes e parceiros 
-                e promove um crescimento mais responsável e duradouro.  
+    <div class="container">
+        <h2>Sustentabilidade Empresarial</h2>
+        <p>
+            Adotar práticas sustentáveis no ambiente empresarial é essencial para reduzir impactos ambientais e otimizar recursos. 
+            Empresas podem investir em economia de energia, reciclagem, uso consciente de materiais, redução de desperdícios e projetos sociais. 
+            Além disso, implementar políticas de responsabilidade ambiental e social fortalece a imagem da empresa, aumenta a confiança de clientes e parceiros 
+            e promove um crescimento mais responsável e duradouro.  
 
-                Práticas como eficiência energética, certificações ambientais, marketing sustentável e incentivo à conscientização dos funcionários 
-                ajudam a consolidar a sustentabilidade como um valor central da organização.
+            Práticas como eficiência energética, certificações ambientais, marketing sustentável e incentivo à conscientização dos funcionários 
+            ajudam a consolidar a sustentabilidade como um valor central da organização.
 
-                Mais especificamente, empresas podem criar programas de redução de emissões de carbono, optar por fornecedores que compartilhem os mesmos 
-                princípios sustentáveis e adotar tecnologias verdes, como energia solar ou reaproveitamento de água. O incentivo à economia circular 
-                permite que produtos e materiais tenham múltiplas vidas, diminuindo a necessidade de exploração de novos recursos.
-            </p>
-            <div style="text-align:center; margin-top:20px;">
-                <a href="#sustentabilidade-empresarial" class="botao">Sustentabilidade Empresarial</a>
-            </div>
-        </div>
-    </section>
+            Mais especificamente, empresas podem criar programas de redução de emissões de carbono, optar por fornecedores que compartilhem os mesmos 
+            princípios sustentáveis e adotar tecnologias verdes, como energia solar ou reaproveitamento de água. O incentivo à economia circular 
+            permite que produtos e materiais tenham múltiplas vidas, diminuindo a necessidade de exploração de novos recursos.
+        </p>
+    </div>
+</section>
 
     <!-- Seção Onde Descartar o Lixo -->
     <section id="descartar">
@@ -151,53 +147,54 @@
     </footer>
 
     <script>
-        // Rolagem suave para os links de navegação
+        // Corrige a rolagem suave e ajuste com cabeçalho fixo
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start' // garante que o topo da seção fique no topo da tela
-                    });
-                }
+                
+                // Ajustando o deslocamento
+                window.scrollTo({
+                    top: targetElement.offsetTop - document.querySelector('header').offsetHeight, // Subtrai a altura do cabeçalho fixo
+                    behavior: 'smooth'
+                });
             });
-        });
-    </script>
-
-    <script>
-        // Validação do formulário
-        document.querySelector('form').addEventListener('submit', function(e) {
-            let nome = document.getElementById('nome').value;
-            let email = document.getElementById('email').value;
-            let mensagem = document.getElementById('mensagem').value;
-            let mensagemErro = '';
-
-            // Valida o campo nome
-            if (nome.trim() === '') {
-                mensagemErro += 'O campo Nome é obrigatório.\n';
-            }
-
-            // Valida o campo email
-            if (email.trim() === '') {
-                mensagemErro += 'O campo Email é obrigatório.\n';
-            } else if (!/\S+@\S+\.\S+/.test(email)) {
-                mensagemErro += 'Por favor, insira um email válido.\n';
-            }
-
-            // Valida o campo mensagem
-            if (mensagem.trim() === '') {
-                mensagemErro += 'O campo Mensagem é obrigatório.\n';
-            }
-
-            // Se houver erro, exibe uma mensagem
-            if (mensagemErro !== '') {
-                alert(mensagemErro);
-                e.preventDefault(); // Impede o envio do formulário
-            }
         });
     </script>
 </body>
 </html>
+
+
+<script>
+    // Validação do formulário
+    document.querySelector('form').addEventListener('submit', function(e) {
+        let nome = document.getElementById('nome').value;
+        let email = document.getElementById('email').value;
+        let mensagem = document.getElementById('mensagem').value;
+        let mensagemErro = '';
+
+        // Valida o campo nome
+        if (nome.trim() === '') {
+            mensagemErro += 'O campo Nome é obrigatório.\n';
+        }
+
+        // Valida o campo email
+        if (email.trim() === '') {
+            mensagemErro += 'O campo Email é obrigatório.\n';
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            mensagemErro += 'Por favor, insira um email válido.\n';
+        }
+
+        // Valida o campo mensagem
+        if (mensagem.trim() === '') {
+            mensagemErro += 'O campo Mensagem é obrigatório.\n';
+        }
+
+        // Se houver erro, exibe uma mensagem
+        if (mensagemErro !== '') {
+            alert(mensagemErro);
+            e.preventDefault(); // Impede o envio do formulário
+        }
+    });
+</script>
