@@ -21,6 +21,7 @@
                     <li><a href="#descartar">Onde Descartar</a></li>
                     <li><a href="#contato">Contato</a></li>
                     <li><a href="#referencias">Referências</a></li>
+                    <li><a href="#sustentabilidade-empresarial">Sustentabilidade Empresarial</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,16 +80,15 @@
                 Empresas podem investir em economia de energia, reciclagem, uso consciente de materiais, redução de desperdícios e projetos sociais. 
                 Além disso, implementar políticas de responsabilidade ambiental e social fortalece a imagem da empresa, aumenta a confiança de clientes e parceiros 
                 e promove um crescimento mais responsável e duradouro.  
-
                 Práticas como eficiência energética, certificações ambientais, marketing sustentável e incentivo à conscientização dos funcionários 
                 ajudam a consolidar a sustentabilidade como um valor central da organização.
-
+                
                 Mais especificamente, empresas podem criar programas de redução de emissões de carbono, optar por fornecedores que compartilhem os mesmos 
                 princípios sustentáveis e adotar tecnologias verdes, como energia solar ou reaproveitamento de água. O incentivo à economia circular 
                 permite que produtos e materiais tenham múltiplas vidas, diminuindo a necessidade de exploração de novos recursos.
             </p>
             <div style="text-align:center; margin-top:20px;">
-                <a href="#sustentabilidade-empresarial" class="botao">Sustentabilidade Empresarial</a>
+                <a href="#sustentabilidade-empresarial" class="botao">Saiba Mais</a>
             </div>
         </div>
     </section>
@@ -151,23 +151,6 @@
     </footer>
 
     <script>
-        // Rolagem suave para os links de navegação
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start' // garante que o topo da seção fique no topo da tela
-                    });
-                }
-            });
-        });
-    </script>
-
-    <script>
         // Validação do formulário
         document.querySelector('form').addEventListener('submit', function(e) {
             let nome = document.getElementById('nome').value;
@@ -197,6 +180,29 @@
                 alert(mensagemErro);
                 e.preventDefault(); // Impede o envio do formulário
             }
+        });
+    </script>
+
+    <script>
+        // Rolagem suave considerando o cabeçalho fixo
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
         });
     </script>
 </body>
