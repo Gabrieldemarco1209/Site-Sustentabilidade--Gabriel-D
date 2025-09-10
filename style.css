@@ -230,5 +230,12 @@ header {
     top: auto; /* reseta o top */
 }
 
+/* Faz com que as seções parem certinho abaixo do header fixo */
+section {
+    scroll-margin-top: 80px; /* ajuste se necessário */
+}
+
+
+
 
 
