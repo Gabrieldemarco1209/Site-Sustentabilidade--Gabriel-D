@@ -5,9 +5,7 @@
     box-sizing: border-box;
     
 }
-section[id]{
-    scroll-margin-top:-150px;
-}
+
 
 /* Corpo e fundo */
 body {
@@ -232,10 +230,6 @@ header {
     position: relative; /* remove o sticky/fixo */
     top: auto; /* reseta o top */
 }
-
-
-
-
 
 
 
