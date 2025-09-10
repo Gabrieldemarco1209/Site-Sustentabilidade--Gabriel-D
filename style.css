@@ -223,24 +223,9 @@ footer p {
     }
 }
 
-/* ---------------- MELHORIA: Menu compacto no topo em landscape ---------------- */
-@media (max-width: 1024px) and (orientation: landscape) {
-    header {
-        padding: 2px 0; /* altura mínima do header */
-    }
-
-    header h1 {
-        font-size: 1.2rem; /* título bem menor */
-        margin-bottom: 2px;
-    }
-
-    nav ul li a {
-        font-size: 0.8em; /* links menores */
-        padding: 1px 4px; /* menos espaço entre links */
-    }
-
-    nav ul li {
-        margin: 0 5px; /* distância mínima entre itens */
-    }
+/* ---------------- MELHORIA: Header não fixo ---------------- */
+header {
+    position: relative; /* remove o sticky/fixo */
+    top: auto; /* reseta o top */
 }
 
