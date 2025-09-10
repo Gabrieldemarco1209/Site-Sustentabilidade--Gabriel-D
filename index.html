@@ -19,6 +19,7 @@
                     <li><a href="#dicas">Dicas Sustentáveis</a></li>
                     <li><a href="#contato-natureza">Contato com a Natureza</a></li>
                     <li><a href="#descartar">Onde Descartar</a></li>
+                    <li><a href="#sustentabilidade-empresarial">Sustentabilidade Empresarial</a></li>
                     <li><a href="#contato">Contato</a></li>
                     <li><a href="#referencias">Referências</a></li>
                 </ul>
@@ -71,20 +72,17 @@
     </section>
 
     <!-- Seção: Sustentabilidade Empresarial -->
-<section id="sustentabilidade-empresarial">
-    <h2>Sustentabilidade Empresarial</h2>
-    <p>
-        Adotar práticas sustentáveis no ambiente empresarial é essencial para reduzir impactos ambientais e otimizar recursos. 
-        Empresas podem investir em economia de energia, reciclagem, uso consciente de materiais, redução de desperdícios e projetos sociais. 
-        Além disso, implementar políticas de responsabilidade ambiental e social fortalece a imagem da empresa, aumenta a confiança de clientes e parceiros 
-        e promove um crescimento mais responsável e duradouro.  
-        Práticas como eficiência energética, certificações ambientais, marketing sustentável e incentivo à conscientização dos funcionários 
-        ajudam a consolidar a sustentabilidade como um valor central da organização.
-    </p>
-    <div style="text-align:center; margin-top:20px;">
-        <a href="#sua-acao-ou-link" class="botao">Saiba Mais</a>
-    </div>
-</section>
+    <section id="sustentabilidade-empresarial">
+        <h2>Sustentabilidade Empresarial</h2>
+        <p>
+            Adotar práticas sustentáveis no ambiente empresarial é essencial para reduzir impactos ambientais e otimizar recursos. 
+            Empresas podem investir em economia de energia, reciclagem, uso consciente de materiais, redução de desperdícios e projetos sociais. 
+            Além disso, implementar políticas de responsabilidade ambiental e social fortalece a imagem da empresa, aumenta a confiança de clientes e parceiros 
+            e promove um crescimento mais responsável e duradouro.  
+            Práticas como eficiência energética, certificações ambientais, marketing sustentável e incentivo à conscientização dos funcionários 
+            ajudam a consolidar a sustentabilidade como um valor central da organização.
+        </p>
+    </section>
 
    <!-- Seção Onde Descartar o Lixo -->
     <section id="descartar">
@@ -158,42 +156,35 @@
                 });
             });
         });
+
+        // Validação do formulário
+        document.querySelector('form').addEventListener('submit', function(e) {
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let mensagem = document.getElementById('mensagem').value;
+            let mensagemErro = '';
+
+            if (nome.trim() === '') {
+                mensagemErro += 'O campo Nome é obrigatório.\n';
+            }
+
+            if (email.trim() === '') {
+                mensagemErro += 'O campo Email é obrigatório.\n';
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                mensagemErro += 'Por favor, insira um email válido.\n';
+            }
+
+            if (mensagem.trim() === '') {
+                mensagemErro += 'O campo Mensagem é obrigatório.\n';
+            }
+
+            if (mensagemErro !== '') {
+                alert(mensagemErro);
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
-
-
-<script>
-    // Validação do formulário
-    document.querySelector('form').addEventListener('submit', function(e) {
-        let nome = document.getElementById('nome').value;
-        let email = document.getElementById('email').value;
-        let mensagem = document.getElementById('mensagem').value;
-        let mensagemErro = '';
-
-        // Valida o campo nome
-        if (nome.trim() === '') {
-            mensagemErro += 'O campo Nome é obrigatório.\n';
-        }
-
-        // Valida o campo email
-        if (email.trim() === '') {
-            mensagemErro += 'O campo Email é obrigatório.\n';
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            mensagemErro += 'Por favor, insira um email válido.\n';
-        }
-
-        // Valida o campo mensagem
-        if (mensagem.trim() === '') {
-            mensagemErro += 'O campo Mensagem é obrigatório.\n';
-        }
-
-        // Se houver erro, exibe uma mensagem
-        if (mensagemErro !== '') {
-            alert(mensagemErro);
-            e.preventDefault(); // Impede o envio do formulário
-        }
-    });
-</script>
 
 
