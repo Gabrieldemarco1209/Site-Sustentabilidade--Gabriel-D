@@ -270,24 +270,32 @@ footer p {
     }
 }
 
-/* ---------------- MELHORIA: Landscape em celulares ---------------- */
+/* ---------------- MELHORIA EFETIVA: Landscape em celulares ---------------- */
 @media (max-width: 1024px) and (orientation: landscape) {
     header {
-        padding: 10px 0; /* diminui altura do header */
+        padding: 8px 0; /* diminui altura do header */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* empilha os itens do menu */
+        align-items: center;
+        margin-top: 5px;
     }
 
     nav ul li {
-        display: block; /* itens do menu empilhados */
-        margin: 5px 0;
+        display: block;
+        margin: 3px 0;
     }
 
     nav ul li a {
         font-size: 0.9em; /* reduz tamanho da fonte */
-        padding: 3px 8px;
+        padding: 4px 6px;
     }
 
     header h1 {
         font-size: 1.4rem; /* diminui o título */
+        margin-bottom: 5px;
     }
 
     .container {
